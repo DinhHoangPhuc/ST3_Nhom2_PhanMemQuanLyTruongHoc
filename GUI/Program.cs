@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
 
 namespace GUI
 {
@@ -16,7 +17,19 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            // Khởi tạo MaterialSkinManager và thiết lập theme dựa trên Settings
+            var materialSkinManager = MaterialSkinManager.Instance;
+            if (Properties.Settings.Default.IsDarkTheme)
+            {
+                materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            }
+            else
+            {
+                materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            }
+
+            Application.Run(new FormDangNhap());
         }
     }
 }

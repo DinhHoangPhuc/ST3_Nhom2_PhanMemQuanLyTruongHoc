@@ -11,3 +11,5 @@ C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food 
 C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\obj\Debug\GUI.pdb
 C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\obj\Debug\GUI.FormDangNhap.resources
 C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\obj\Debug\GUI.FormTrangChu.resources
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\bin\Debug\BUS.dll
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\bin\Debug\BUS.pdb

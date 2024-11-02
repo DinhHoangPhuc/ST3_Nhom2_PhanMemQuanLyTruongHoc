@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
@@ -15,6 +16,7 @@ namespace GUI
     public partial class FormTrangChu : MaterialSkin.Controls.MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
+        private Class1 class1;
 
         public FormTrangChu()
         {
@@ -29,6 +31,9 @@ namespace GUI
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Blue500, Primary.Blue700, Primary.Blue200,
                 Accent.Orange400, TextShade.WHITE);
+
+            class1 = new Class1();
+            label1.Text = class1.Hello();
         }
 
         private void materialSwitch1_CheckedChanged(object sender, EventArgs e)

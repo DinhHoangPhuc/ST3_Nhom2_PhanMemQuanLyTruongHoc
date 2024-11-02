@@ -1,0 +1,5 @@
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\BUS\bin\Debug\BUS.dll
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\BUS\bin\Debug\BUS.pdb
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\BUS\obj\Debug\BUS.dll
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\BUS\obj\Debug\BUS.pdb

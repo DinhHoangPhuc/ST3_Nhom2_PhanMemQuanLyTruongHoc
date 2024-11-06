@@ -5,9 +5,5 @@
 *.tmp
 *.log
 
-# Ignore build directories
-bin/
-obj/
-
 # Ignore designer files
 *.Designer.cs

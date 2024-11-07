@@ -7,23 +7,23 @@
       "RelativeMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|solutionrelative:gui\\formvipham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|d:\\h\u1ECDc t\u1EADp\\source code\\st3_nhom2_phanmemquanlytruonghoc\\gui\\formvipham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|solutionrelative:gui\\formvipham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|d:\\h\u1ECDc t\u1EADp\\source code\\st3_nhom2_phanmemquanlytruonghoc\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|D:\\H\u1ECDc T\u1EADp\\Source Code\\ST3_Nhom2_PhanMemQuanLyTruongHoc\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|solutionrelative:gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|d:\\h\u1ECDc t\u1EADp\\source code\\st3_nhom2_phanmemquanlytruonghoc\\gui\\qlth.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "AbsoluteMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|D:\\H\u1ECDc T\u1EADp\\Source Code\\ST3_Nhom2_PhanMemQuanLyTruongHoc\\gui\\formvipham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|solutionrelative:gui\\formvipham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|D:\\H\u1ECDc T\u1EADp\\Source Code\\ST3_Nhom2_PhanMemQuanLyTruongHoc\\gui\\qlth.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
       "RelativeMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|solutionrelative:gui\\qlth.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|d:\\h\u1ECDc t\u1EADp\\source code\\st3_nhom2_phanmemquanlytruonghoc\\gui\\formtrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|D:\\H\u1ECDc T\u1EADp\\Source Code\\ST3_Nhom2_PhanMemQuanLyTruongHoc\\gui\\formtrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|solutionrelative:gui\\formtrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|d:\\h\u1ECDc t\u1EADp\\source code\\st3_nhom2_phanmemquanlytruonghoc\\gui\\formdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|D:\\H\u1ECDc T\u1EADp\\Source Code\\ST3_Nhom2_PhanMemQuanLyTruongHoc\\gui\\formdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}|GUI\\GUI.csproj|solutionrelative:gui\\formdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -38,20 +38,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormViPham.cs",
               "DocumentMoniker": "D:\\H\u1ECDc T\u1EADp\\Source Code\\ST3_Nhom2_PhanMemQuanLyTruongHoc\\GUI\\FormViPham.cs",
               "RelativeDocumentMoniker": "GUI\\FormViPham.cs",
               "ToolTip": "D:\\H\u1ECDc T\u1EADp\\Source Code\\ST3_Nhom2_PhanMemQuanLyTruongHoc\\GUI\\FormViPham.cs",
               "RelativeToolTip": "GUI\\FormViPham.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAQwFIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAiwNkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T17:18:15.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\H\u1ECDc T\u1EADp\\Source Code\\ST3_Nhom2_PhanMemQuanLyTruongHoc\\GUI\\Program.cs",
               "RelativeDocumentMoniker": "GUI\\Program.cs",
@@ -71,8 +71,7 @@
               "ToolTip": "D:\\H\u1ECDc T\u1EADp\\Source Code\\ST3_Nhom2_PhanMemQuanLyTruongHoc\\GUI\\QLTH.dbml",
               "RelativeToolTip": "GUI\\QLTH.dbml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
-              "WhenOpened": "2024-11-07T16:50:53.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T16:50:53.013Z"
             },
             {
               "$type": "Document",
@@ -95,8 +94,7 @@
               "ToolTip": "D:\\H\u1ECDc T\u1EADp\\Source Code\\ST3_Nhom2_PhanMemQuanLyTruongHoc\\GUI\\FormTrangChu.cs [Design]",
               "RelativeToolTip": "GUI\\FormTrangChu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T16:41:58.309Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-07T16:41:58.309Z"
             },
             {
               "$type": "Document",
@@ -107,8 +105,7 @@
               "ToolTip": "D:\\H\u1ECDc T\u1EADp\\Source Code\\ST3_Nhom2_PhanMemQuanLyTruongHoc\\GUI\\FormDangNhap.cs [Design]",
               "RelativeToolTip": "GUI\\FormDangNhap.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T16:41:55.182Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-07T16:41:55.182Z"
             }
           ]
         }

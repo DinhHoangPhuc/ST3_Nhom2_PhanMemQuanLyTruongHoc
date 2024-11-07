@@ -42,6 +42,9 @@
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.numeric_DiemTru = new System.Windows.Forms.NumericUpDown();
             this.Cbb_GiangVien = new MaterialSkin.Controls.MaterialComboBox();
+            this.btn_Them = new MaterialSkin.Controls.MaterialButton();
+            this.btn_Sua = new MaterialSkin.Controls.MaterialButton();
+            this.btn_Xoa = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvViPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_DiemTru)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +66,7 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(21, 153);
+            this.materialLabel2.Location = new System.Drawing.Point(21, 88);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(88, 19);
@@ -75,7 +78,7 @@
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(363, 153);
+            this.materialLabel3.Location = new System.Drawing.Point(363, 88);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(92, 19);
@@ -87,7 +90,7 @@
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(28, 230);
+            this.materialLabel4.Location = new System.Drawing.Point(28, 165);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(57, 19);
@@ -99,7 +102,7 @@
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(370, 216);
+            this.materialLabel5.Location = new System.Drawing.Point(770, 164);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(67, 19);
@@ -111,7 +114,7 @@
             this.materialLabel6.AutoSize = true;
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(713, 153);
+            this.materialLabel6.Location = new System.Drawing.Point(362, 164);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(78, 19);
@@ -139,12 +142,13 @@
             this.txt_MaViPham.BeepOnError = false;
             this.txt_MaViPham.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txt_MaViPham.Depth = 0;
-            this.txt_MaViPham.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_MaViPham.Enabled = false;
+            this.txt_MaViPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_MaViPham.HidePromptOnLeave = false;
             this.txt_MaViPham.HideSelection = true;
             this.txt_MaViPham.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txt_MaViPham.LeadingIcon = null;
-            this.txt_MaViPham.Location = new System.Drawing.Point(167, 139);
+            this.txt_MaViPham.Location = new System.Drawing.Point(167, 74);
             this.txt_MaViPham.Mask = "";
             this.txt_MaViPham.MaxLength = 32767;
             this.txt_MaViPham.MouseState = MaterialSkin.MouseState.OUT;
@@ -185,7 +189,7 @@
             this.txt_TenViPham.HideSelection = true;
             this.txt_TenViPham.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txt_TenViPham.LeadingIcon = null;
-            this.txt_TenViPham.Location = new System.Drawing.Point(509, 139);
+            this.txt_TenViPham.Location = new System.Drawing.Point(509, 74);
             this.txt_TenViPham.Mask = "";
             this.txt_TenViPham.MaxLength = 32767;
             this.txt_TenViPham.MouseState = MaterialSkin.MouseState.OUT;
@@ -226,7 +230,7 @@
             this.txt_GhiChu.HideSelection = true;
             this.txt_GhiChu.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txt_GhiChu.LeadingIcon = null;
-            this.txt_GhiChu.Location = new System.Drawing.Point(167, 216);
+            this.txt_GhiChu.Location = new System.Drawing.Point(167, 151);
             this.txt_GhiChu.Mask = "";
             this.txt_GhiChu.MaxLength = 32767;
             this.txt_GhiChu.MouseState = MaterialSkin.MouseState.OUT;
@@ -255,9 +259,9 @@
             // 
             // datetimpicker_NgayVP
             // 
-            this.datetimpicker_NgayVP.Location = new System.Drawing.Point(875, 214);
+            this.datetimpicker_NgayVP.Location = new System.Drawing.Point(858, 84);
             this.datetimpicker_NgayVP.Name = "datetimpicker_NgayVP";
-            this.datetimpicker_NgayVP.Size = new System.Drawing.Size(225, 22);
+            this.datetimpicker_NgayVP.Size = new System.Drawing.Size(244, 22);
             this.datetimpicker_NgayVP.TabIndex = 14;
             // 
             // materialLabel7
@@ -265,7 +269,7 @@
             this.materialLabel7.AutoSize = true;
             this.materialLabel7.Depth = 0;
             this.materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel7.Location = new System.Drawing.Point(713, 219);
+            this.materialLabel7.Location = new System.Drawing.Point(715, 89);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
             this.materialLabel7.Size = new System.Drawing.Size(102, 19);
@@ -274,7 +278,7 @@
             // 
             // numeric_DiemTru
             // 
-            this.numeric_DiemTru.Location = new System.Drawing.Point(509, 216);
+            this.numeric_DiemTru.Location = new System.Drawing.Point(909, 164);
             this.numeric_DiemTru.Maximum = new decimal(new int[] {
             3,
             0,
@@ -308,7 +312,7 @@
             this.Cbb_GiangVien.FormattingEnabled = true;
             this.Cbb_GiangVien.IntegralHeight = false;
             this.Cbb_GiangVien.ItemHeight = 43;
-            this.Cbb_GiangVien.Location = new System.Drawing.Point(821, 138);
+            this.Cbb_GiangVien.Location = new System.Drawing.Point(470, 149);
             this.Cbb_GiangVien.MaxDropDownItems = 4;
             this.Cbb_GiangVien.MouseState = MaterialSkin.MouseState.OUT;
             this.Cbb_GiangVien.Name = "Cbb_GiangVien";
@@ -316,11 +320,74 @@
             this.Cbb_GiangVien.StartIndex = 0;
             this.Cbb_GiangVien.TabIndex = 19;
             // 
+            // btn_Them
+            // 
+            this.btn_Them.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Them.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btn_Them.Depth = 0;
+            this.btn_Them.HighEmphasis = true;
+            this.btn_Them.Icon = null;
+            this.btn_Them.Location = new System.Drawing.Point(367, 237);
+            this.btn_Them.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Them.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btn_Them.Size = new System.Drawing.Size(64, 36);
+            this.btn_Them.TabIndex = 20;
+            this.btn_Them.Text = "Thêm";
+            this.btn_Them.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btn_Them.UseAccentColor = false;
+            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
+            // 
+            // btn_Sua
+            // 
+            this.btn_Sua.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Sua.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btn_Sua.Depth = 0;
+            this.btn_Sua.HighEmphasis = true;
+            this.btn_Sua.Icon = null;
+            this.btn_Sua.Location = new System.Drawing.Point(469, 237);
+            this.btn_Sua.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Sua.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_Sua.Name = "btn_Sua";
+            this.btn_Sua.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btn_Sua.Size = new System.Drawing.Size(64, 36);
+            this.btn_Sua.TabIndex = 21;
+            this.btn_Sua.Text = "Sửa";
+            this.btn_Sua.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btn_Sua.UseAccentColor = false;
+            this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
+            // 
+            // btn_Xoa
+            // 
+            this.btn_Xoa.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Xoa.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btn_Xoa.Depth = 0;
+            this.btn_Xoa.HighEmphasis = true;
+            this.btn_Xoa.Icon = null;
+            this.btn_Xoa.Location = new System.Drawing.Point(569, 237);
+            this.btn_Xoa.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_Xoa.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btn_Xoa.Size = new System.Drawing.Size(64, 36);
+            this.btn_Xoa.TabIndex = 22;
+            this.btn_Xoa.Text = "Xóa";
+            this.btn_Xoa.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btn_Xoa.UseAccentColor = false;
+            this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
+            // 
             // FormViPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1138, 674);
+            this.Controls.Add(this.btn_Xoa);
+            this.Controls.Add(this.btn_Sua);
+            this.Controls.Add(this.btn_Them);
             this.Controls.Add(this.Cbb_GiangVien);
             this.Controls.Add(this.numeric_DiemTru);
             this.Controls.Add(this.materialLabel7);
@@ -360,5 +427,8 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private System.Windows.Forms.NumericUpDown numeric_DiemTru;
         private MaterialSkin.Controls.MaterialComboBox Cbb_GiangVien;
+        private MaterialSkin.Controls.MaterialButton btn_Them;
+        private MaterialSkin.Controls.MaterialButton btn_Sua;
+        private MaterialSkin.Controls.MaterialButton btn_Xoa;
     }
 }

@@ -16,7 +16,8 @@ namespace GUI
     public partial class FormTrangChu : MaterialSkin.Controls.MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
-        private Class1 class1;
+        private Form frmDashboard;
+        private Form frmDiemThiDua;
 
         public FormTrangChu()
         {
@@ -32,8 +33,13 @@ namespace GUI
                 Primary.Blue500, Primary.Blue700, Primary.Blue200,
                 Accent.Orange400, TextShade.WHITE);
 
-            class1 = new Class1();
-            label1.Text = class1.Hello();
+            InitializeChildForms();
+        }
+
+        private void InitializeChildForms()
+        {
+            frmDashboard = new FormDashBoard();
+            frmDiemThiDua = new FormDiemThiDua();
         }
 
         private void materialSwitch1_CheckedChanged(object sender, EventArgs e)
@@ -66,5 +72,62 @@ namespace GUI
                 }
             }
         }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Close();
+            }
+
+            if (tabControl.SelectedTab == TrangChuPage)
+            {
+                AddFormDashBoardToTabPage();
+                //ShowChildForm(ref frmDashboard, typeof(FormDashBoard));
+            }
+            else if (tabControl.SelectedTab == DiemThiDuaViPhamPage)
+            {
+                AddFormDiemThiDuaToTabPage();
+                //ShowChildForm(ref frmDiemThiDua, typeof(FormDiemThiDua));
+            }
+        }
+
+        private void ShowChildForm(ref Form childForm, Type formType)
+        {
+            if (childForm == null || childForm.IsDisposed)
+            {
+                childForm = (Form)Activator.CreateInstance(formType);
+            }
+
+            childForm.MdiParent = this;
+            childForm.Dock = DockStyle.Fill;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Show();
+        }
+
+        private void AddFormDashBoardToTabPage()
+        {
+            frmDashboard.TopLevel = false;
+            frmDashboard.FormBorderStyle = FormBorderStyle.None;
+            frmDashboard.Dock = DockStyle.Fill;
+
+            TrangChuPage.Controls.Clear();
+
+            TrangChuPage.Controls.Add(frmDashboard);
+            frmDashboard.Show();
+        }
+
+        private void AddFormDiemThiDuaToTabPage()
+        {
+            frmDiemThiDua.TopLevel = false;
+            frmDiemThiDua.FormBorderStyle = FormBorderStyle.None;
+            frmDiemThiDua.Dock = DockStyle.Fill;
+
+            DiemThiDuaViPhamPage.Controls.Clear();
+
+            DiemThiDuaViPhamPage.Controls.Add(frmDiemThiDua);
+            frmDiemThiDua.Show();
+        }
+
     }
 }

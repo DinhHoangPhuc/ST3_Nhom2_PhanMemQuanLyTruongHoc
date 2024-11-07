@@ -29,15 +29,21 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTrangChu));
             this.materialSwitch1 = new MaterialSkin.Controls.MaterialSwitch();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
+            this.TrangChuPage = new System.Windows.Forms.TabPage();
+            this.DiemThiDuaViPhamPage = new System.Windows.Forms.TabPage();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialSwitch1
             // 
             this.materialSwitch1.AutoSize = true;
             this.materialSwitch1.Depth = 0;
-            this.materialSwitch1.Location = new System.Drawing.Point(405, 91);
+            this.materialSwitch1.Location = new System.Drawing.Point(861, 25);
             this.materialSwitch1.Margin = new System.Windows.Forms.Padding(0);
             this.materialSwitch1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialSwitch1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -49,26 +55,67 @@ namespace GUI
             this.materialSwitch1.UseVisualStyleBackColor = true;
             this.materialSwitch1.CheckedChanged += new System.EventHandler(this.materialSwitch1_CheckedChanged);
             // 
-            // label1
+            // tabControl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 207);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.tabControl.Controls.Add(this.TrangChuPage);
+            this.tabControl.Controls.Add(this.DiemThiDuaViPhamPage);
+            this.tabControl.Depth = 0;
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.ImageList = this.imageList1;
+            this.tabControl.Location = new System.Drawing.Point(2, 52);
+            this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabControl.Multiline = true;
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1253, 629);
+            this.tabControl.TabIndex = 1;
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
+            // 
+            // TrangChuPage
+            // 
+            this.TrangChuPage.ImageKey = "icons8-home-26.png";
+            this.TrangChuPage.Location = new System.Drawing.Point(4, 39);
+            this.TrangChuPage.Name = "TrangChuPage";
+            this.TrangChuPage.Padding = new System.Windows.Forms.Padding(3);
+            this.TrangChuPage.Size = new System.Drawing.Size(1245, 586);
+            this.TrangChuPage.TabIndex = 0;
+            this.TrangChuPage.Text = "Trang chủ";
+            this.TrangChuPage.UseVisualStyleBackColor = true;
+            // 
+            // DiemThiDuaViPhamPage
+            // 
+            this.DiemThiDuaViPhamPage.ImageKey = "icons8-ratings-26.png";
+            this.DiemThiDuaViPhamPage.Location = new System.Drawing.Point(4, 39);
+            this.DiemThiDuaViPhamPage.Name = "DiemThiDuaViPhamPage";
+            this.DiemThiDuaViPhamPage.Padding = new System.Windows.Forms.Padding(3);
+            this.DiemThiDuaViPhamPage.Size = new System.Drawing.Size(1245, 586);
+            this.DiemThiDuaViPhamPage.TabIndex = 1;
+            this.DiemThiDuaViPhamPage.Text = "Điểm thi đua";
+            this.DiemThiDuaViPhamPage.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "icons8-home-26.png");
+            this.imageList1.Images.SetKeyName(1, "icons8-ratings-26.png");
             // 
             // FormTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1257, 683);
+            this.Controls.Add(this.tabControl);
             this.Controls.Add(this.materialSwitch1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DrawerShowIconsWhenHidden = true;
+            this.DrawerTabControl = this.tabControl;
+            this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormTrangChu";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangChuForm";
+            this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,6 +124,9 @@ namespace GUI
         #endregion
 
         private MaterialSkin.Controls.MaterialSwitch materialSwitch1;
-        private System.Windows.Forms.Label label1;
+        private MaterialSkin.Controls.MaterialTabControl tabControl;
+        private System.Windows.Forms.TabPage TrangChuPage;
+        private System.Windows.Forms.TabPage DiemThiDuaViPhamPage;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

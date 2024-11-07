@@ -29,7 +29,8 @@ namespace GUI
                 materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             }
 
-            Application.Run(new FormDangNhap());
+            //Application.Run(new FormDangNhap());
+            Application.Run(new FormViPham());
         }
     }
 }

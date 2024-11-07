@@ -11,3 +11,17 @@ C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food 
 C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\obj\Debug\GUI.pdb
 C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\obj\Debug\GUI.FormDangNhap.resources
 C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\obj\Debug\GUI.FormTrangChu.resources
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\bin\Debug\GUI.exe.config
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\bin\Debug\GUI.exe
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\bin\Debug\GUI.pdb
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\bin\Debug\MaterialSkin.dll
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\obj\Debug\GUI.FormDangNhap.resources
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\obj\Debug\GUI.FormTrangChu.resources
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\obj\Debug\GUI.FormViPham.resources
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\obj\Debug\GUI.csproj.Up2Date
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\obj\Debug\GUI.exe
+D:\Học Tập\Source Code\ST3_Nhom2_PhanMemQuanLyTruongHoc\GUI\obj\Debug\GUI.pdb

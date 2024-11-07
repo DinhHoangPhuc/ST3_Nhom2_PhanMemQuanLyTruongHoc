@@ -5,5 +5,13 @@
     <Setting Name="IsDarkTheme" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="QLTRUONGHOC1ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=THANG\DINHTHANG;Initial Catalog=QLTRUONGHOC1;Persist Security Info=True;User ID=sa;Password=123;TrustServerCertificate=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=THANG\DINHTHANG;Initial Catalog=QLTRUONGHOC1;Persist Security Info=True;User ID=sa;Password=123;TrustServerCertificate=True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

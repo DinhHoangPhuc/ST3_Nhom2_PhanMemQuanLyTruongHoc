@@ -42,6 +42,7 @@ namespace GUI
             // materialSwitch1
             // 
             this.materialSwitch1.AutoSize = true;
+            this.materialSwitch1.BackColor = System.Drawing.Color.Transparent;
             this.materialSwitch1.Depth = 0;
             this.materialSwitch1.Location = new System.Drawing.Point(1148, 31);
             this.materialSwitch1.Margin = new System.Windows.Forms.Padding(0);
@@ -49,10 +50,10 @@ namespace GUI
             this.materialSwitch1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSwitch1.Name = "materialSwitch1";
             this.materialSwitch1.Ripple = true;
-            this.materialSwitch1.Size = new System.Drawing.Size(173, 37);
+            this.materialSwitch1.Size = new System.Drawing.Size(125, 37);
             this.materialSwitch1.TabIndex = 0;
-            this.materialSwitch1.Text = "materialSwitch1";
-            this.materialSwitch1.UseVisualStyleBackColor = true;
+            this.materialSwitch1.Text = "Sáng/Tối";
+            this.materialSwitch1.UseVisualStyleBackColor = false;
             this.materialSwitch1.CheckedChanged += new System.EventHandler(this.materialSwitch1_CheckedChanged);
             // 
             // tabControl

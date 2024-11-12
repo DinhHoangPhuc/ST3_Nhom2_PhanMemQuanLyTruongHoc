@@ -11,56 +11,70 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using LiveCharts;
 using LiveCharts.WinForms;
+using BUS;
 
 namespace GUI
 {
     public partial class FormDiemThiDua : Form
     {
+        private DiemThiDua diemThiDua;
+        private ViPham viPham;
+        private string username;
         public FormDiemThiDua()
         {
+            diemThiDua = new DiemThiDua();
+            viPham = new ViPham();
+            username = Session.Username;
+
             InitializeComponent();
             InitializeBarChart();
+            LoadViPhamDatagridview(username, DateTime.Now);
         }
 
         private void InitializeBarChart()
         {
-            // Example data for monthly scores
-            List<double> monthlyScores = new List<double> { 75, 88, 92, 68, 85, 94, 79, 88, 90, 84, 76, 91 };
+            //List<double> monthlyScores = new List<double> { 75, 88, 92, 68, 85, 94, 79, 88, 90, 84, 76, 91 };
+            List<double> monthlyScores = diemThiDua.GetListDiemThiDuaByGiangVien(username, DateTime.Now.Year);
             List<string> monthLabels = new List<string>
         {
             "Jan", "Feb", "Mar", "Apr", "May", "Jun",
             "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
         };
 
-            // Configure the bar series
             var barSeries = new LiveCharts.Wpf.ColumnSeries
             {
-                Title = "Scores",
+                Title = "Điểm thi đua",
                 Values = new ChartValues<double>(monthlyScores),
-                DataLabels = true, // Show score values on top of each bar
-                LabelPoint = point => point.Y.ToString() // Format data labels
+                DataLabels = true, 
+                LabelPoint = point => point.Y.ToString() 
             };
 
-            // Add the series to the chart
             cartesianChart.Series = new SeriesCollection { barSeries };
 
-            // Set the labels for the X-axis (months)
             cartesianChart.AxisX.Add(new LiveCharts.Wpf.Axis
             {
-                Title = "Month",
+                Title = "Tháng",
                 Labels = monthLabels
             });
 
-            // Set the Y-axis properties
             cartesianChart.AxisY.Add(new LiveCharts.Wpf.Axis
             {
-                Title = "Score",
-                MinValue = 0, // Optional: Set the minimum value
-                MaxValue = 100 // Optional: Set the maximum value, assuming scores are out of 100
+                Title = "Điểm thi đua",
+                MinValue = 0, 
+                MaxValue = 10 
             });
 
-            // Additional chart properties (optional)
             cartesianChart.LegendLocation = LegendLocation.Right;
+        }
+
+        private void LoadViPhamDatagridview(string maGV, DateTime ngay)
+        {
+            dgvViPham.DataSource = viPham.GetViPhamByMonth(maGV, ngay);
+        }
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            LoadViPhamDatagridview(username, dateTimePicker.Value);
         }
     }
 }

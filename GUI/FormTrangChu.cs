@@ -69,7 +69,16 @@ namespace GUI
                 if (openForm is MaterialForm materialForm)
                 {
                     materialSkinManager.AddFormToManage(materialForm);
+                    ResetControlSizes(materialForm);
                 }
+            }
+        }
+
+        private void ResetControlSizes(Form form)
+        {
+            foreach (Control control in form.Controls)
+            {
+                control.Size = control.PreferredSize;
             }
         }
 

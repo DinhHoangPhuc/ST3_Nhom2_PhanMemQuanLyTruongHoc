@@ -43,7 +43,7 @@ namespace GUI
             // 
             this.materialSwitch1.AutoSize = true;
             this.materialSwitch1.Depth = 0;
-            this.materialSwitch1.Location = new System.Drawing.Point(861, 25);
+            this.materialSwitch1.Location = new System.Drawing.Point(1148, 31);
             this.materialSwitch1.Margin = new System.Windows.Forms.Padding(0);
             this.materialSwitch1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialSwitch1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -62,12 +62,13 @@ namespace GUI
             this.tabControl.Depth = 0;
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.ImageList = this.imageList1;
-            this.tabControl.Location = new System.Drawing.Point(2, 52);
+            this.tabControl.Location = new System.Drawing.Point(3, 64);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1253, 629);
+            this.tabControl.Size = new System.Drawing.Size(1776, 953);
             this.tabControl.TabIndex = 1;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
@@ -75,9 +76,10 @@ namespace GUI
             // 
             this.TrangChuPage.ImageKey = "icons8-home-26.png";
             this.TrangChuPage.Location = new System.Drawing.Point(4, 39);
+            this.TrangChuPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TrangChuPage.Name = "TrangChuPage";
-            this.TrangChuPage.Padding = new System.Windows.Forms.Padding(3);
-            this.TrangChuPage.Size = new System.Drawing.Size(1245, 586);
+            this.TrangChuPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TrangChuPage.Size = new System.Drawing.Size(1768, 910);
             this.TrangChuPage.TabIndex = 0;
             this.TrangChuPage.Text = "Trang chủ";
             this.TrangChuPage.UseVisualStyleBackColor = true;
@@ -86,9 +88,10 @@ namespace GUI
             // 
             this.DiemThiDuaViPhamPage.ImageKey = "icons8-ratings-26.png";
             this.DiemThiDuaViPhamPage.Location = new System.Drawing.Point(4, 39);
+            this.DiemThiDuaViPhamPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DiemThiDuaViPhamPage.Name = "DiemThiDuaViPhamPage";
-            this.DiemThiDuaViPhamPage.Padding = new System.Windows.Forms.Padding(3);
-            this.DiemThiDuaViPhamPage.Size = new System.Drawing.Size(1245, 586);
+            this.DiemThiDuaViPhamPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DiemThiDuaViPhamPage.Size = new System.Drawing.Size(1663, 731);
             this.DiemThiDuaViPhamPage.TabIndex = 1;
             this.DiemThiDuaViPhamPage.Text = "Điểm thi đua";
             this.DiemThiDuaViPhamPage.UseVisualStyleBackColor = true;
@@ -102,17 +105,17 @@ namespace GUI
             // 
             // FormTrangChu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 683);
+            this.ClientSize = new System.Drawing.Size(1782, 1019);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.materialSwitch1);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.tabControl;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormTrangChu";
-            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
+            this.Padding = new System.Windows.Forms.Padding(3, 64, 3, 2);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangChuForm";
             this.tabControl.ResumeLayout(false);

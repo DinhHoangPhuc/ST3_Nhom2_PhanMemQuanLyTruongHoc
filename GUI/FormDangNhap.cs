@@ -45,6 +45,8 @@ namespace GUI
             {
                 if(dangNhaphelper.CheckHoatDongTaiKhoan(taiKhoan))
                 {
+                    Session.Username = taiKhoan;
+
                     MessageBox.Show("Đăng nhập thành công");
                     MoFormTrangChu();
                 }
@@ -64,6 +66,11 @@ namespace GUI
             FormTrangChu frm = new FormTrangChu();
             frm.Show();
             this.Hide();
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtMatKhau.Password = !chkShowPassword.Checked;
         }
     }
 }

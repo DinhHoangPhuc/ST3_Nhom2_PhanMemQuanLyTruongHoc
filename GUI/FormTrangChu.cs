@@ -18,6 +18,7 @@ namespace GUI
         private readonly MaterialSkinManager materialSkinManager;
         private Form frmDashboard;
         private Form frmDiemThiDua;
+        private Form frmXemTienLuong;
 
         public FormTrangChu()
         {
@@ -40,6 +41,7 @@ namespace GUI
         {
             frmDashboard = new FormDashBoard();
             frmDiemThiDua = new FormDiemThiDua();
+            frmXemTienLuong = new FormXemTienLuong();
         }
 
         private void materialSwitch1_CheckedChanged(object sender, EventArgs e)
@@ -99,6 +101,11 @@ namespace GUI
                 AddFormDiemThiDuaToTabPage();
                 //ShowChildForm(ref frmDiemThiDua, typeof(FormDiemThiDua));
             }
+            else if (tabControl.SelectedTab == XemTienLuongPage)
+            {
+                AddFormXemTienLuongToTabPage();
+            }
+
         }
 
         private void ShowChildForm(ref Form childForm, Type formType)
@@ -137,6 +144,21 @@ namespace GUI
             DiemThiDuaViPhamPage.Controls.Add(frmDiemThiDua);
             frmDiemThiDua.Show();
         }
+        private void AddFormXemTienLuongToTabPage()
+        {
+            frmXemTienLuong.TopLevel = false;
+            frmXemTienLuong.FormBorderStyle = FormBorderStyle.None;
+            frmXemTienLuong.AutoSize = false;
+            frmXemTienLuong.AutoScaleMode = AutoScaleMode.None;
+            frmXemTienLuong.Dock = DockStyle.Fill;
+            XemTienLuongPage.Controls.Clear();
+            XemTienLuongPage.Controls.Add(frmXemTienLuong);
+            frmXemTienLuong.Show();
+        }
 
+        private void FormTrangChu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

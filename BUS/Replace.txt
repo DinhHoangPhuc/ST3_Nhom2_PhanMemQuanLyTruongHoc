@@ -1,0 +1,24 @@
+private static void Replace(IWorksheet workSheet, string findValue, string replaceValue)
+{
+            // Find and replace
+            if (workSheet != null && !string.IsNullOrEmpty(findValue))
+            {
+                // Get current cells
+                IRange[] cells = workSheet.Range.Cells;
+                IRange range = null;
+
+                // Loop cells to replace
+                for (int i = 0; i < cells.Count(); i++)
+                {
+                    // Current cell
+                    range = cells[i];
+
+                    // Find and replace values
+                    if (range != null && range.DisplayText.Contains(findValue))
+                    {
+                        range.Text = range.Text.Replace(findValue, replaceValue);
+                        break;
+                    }
+                }
+            }
+}

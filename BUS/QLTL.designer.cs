@@ -22,7 +22,7 @@ namespace BUS
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QLTRUONGHOC")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QLTRUONGHOC1")]
 	public partial class QLTLDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -90,10 +90,13 @@ namespace BUS
     partial void InsertTHUCDAY(THUCDAY instance);
     partial void UpdateTHUCDAY(THUCDAY instance);
     partial void DeleteTHUCDAY(THUCDAY instance);
+    partial void InsertTIENTIETVUOT(TIENTIETVUOT instance);
+    partial void UpdateTIENTIETVUOT(TIENTIETVUOT instance);
+    partial void DeleteTIENTIETVUOT(TIENTIETVUOT instance);
     #endregion
 		
 		public QLTLDataContext() : 
-				base(global::BUS.Properties.Settings.Default.QLTRUONGHOCConnectionString, mappingSource)
+				base(global::BUS.Properties.Settings.Default.QLTRUONGHOC1ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -279,6 +282,14 @@ namespace BUS
 			get
 			{
 				return this.GetTable<THUCDAY>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TIENTIETVUOT> TIENTIETVUOTs
+		{
+			get
+			{
+				return this.GetTable<TIENTIETVUOT>();
 			}
 		}
 	}
@@ -1163,6 +1174,8 @@ namespace BUS
 		
 		private EntitySet<THUCDAY> _THUCDAYs;
 		
+		private EntitySet<TIENTIETVUOT> _TIENTIETVUOTs;
+		
 		private EntityRef<CHUCVU> _CHUCVU1;
 		
 		private EntityRef<HESOLUONG> _HESOLUONG1;
@@ -1208,6 +1221,7 @@ namespace BUS
 			this._GV_BCs = new EntitySet<GV_BC>(new Action<GV_BC>(this.attach_GV_BCs), new Action<GV_BC>(this.detach_GV_BCs));
 			this._TIENLUONGTHEOTHANGs = new EntitySet<TIENLUONGTHEOTHANG>(new Action<TIENLUONGTHEOTHANG>(this.attach_TIENLUONGTHEOTHANGs), new Action<TIENLUONGTHEOTHANG>(this.detach_TIENLUONGTHEOTHANGs));
 			this._THUCDAYs = new EntitySet<THUCDAY>(new Action<THUCDAY>(this.attach_THUCDAYs), new Action<THUCDAY>(this.detach_THUCDAYs));
+			this._TIENTIETVUOTs = new EntitySet<TIENTIETVUOT>(new Action<TIENTIETVUOT>(this.attach_TIENTIETVUOTs), new Action<TIENTIETVUOT>(this.detach_TIENTIETVUOTs));
 			this._CHUCVU1 = default(EntityRef<CHUCVU>);
 			this._HESOLUONG1 = default(EntityRef<HESOLUONG>);
 			this._HOCVI1 = default(EntityRef<HOCVI>);
@@ -1521,6 +1535,19 @@ namespace BUS
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="GIANGVIEN_TIENTIETVUOT", Storage="_TIENTIETVUOTs", ThisKey="MAGIANGVIEN", OtherKey="MAGIANGVIEN")]
+		public EntitySet<TIENTIETVUOT> TIENTIETVUOTs
+		{
+			get
+			{
+				return this._TIENTIETVUOTs;
+			}
+			set
+			{
+				this._TIENTIETVUOTs.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CHUCVU_GIANGVIEN", Storage="_CHUCVU1", ThisKey="CHUCVU", OtherKey="MACHUCVU", IsForeignKey=true)]
 		public CHUCVU CHUCVU1
 		{
@@ -1766,6 +1793,18 @@ namespace BUS
 		}
 		
 		private void detach_THUCDAYs(THUCDAY entity)
+		{
+			this.SendPropertyChanging();
+			entity.GIANGVIEN = null;
+		}
+		
+		private void attach_TIENTIETVUOTs(TIENTIETVUOT entity)
+		{
+			this.SendPropertyChanging();
+			entity.GIANGVIEN = this;
+		}
+		
+		private void detach_TIENTIETVUOTs(TIENTIETVUOT entity)
 		{
 			this.SendPropertyChanging();
 			entity.GIANGVIEN = null;
@@ -2578,6 +2617,8 @@ namespace BUS
 		
 		private EntitySet<THUCDAY> _THUCDAYs;
 		
+		private EntitySet<TIENTIETVUOT> _TIENTIETVUOTs;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2594,6 +2635,7 @@ namespace BUS
 		{
 			this._HOCKies = new EntitySet<HOCKY>(new Action<HOCKY>(this.attach_HOCKies), new Action<HOCKY>(this.detach_HOCKies));
 			this._THUCDAYs = new EntitySet<THUCDAY>(new Action<THUCDAY>(this.attach_THUCDAYs), new Action<THUCDAY>(this.detach_THUCDAYs));
+			this._TIENTIETVUOTs = new EntitySet<TIENTIETVUOT>(new Action<TIENTIETVUOT>(this.attach_TIENTIETVUOTs), new Action<TIENTIETVUOT>(this.detach_TIENTIETVUOTs));
 			OnCreated();
 		}
 		
@@ -2683,6 +2725,19 @@ namespace BUS
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NAMHOC_TIENTIETVUOT", Storage="_TIENTIETVUOTs", ThisKey="MANAMHOC", OtherKey="MANAMHOC")]
+		public EntitySet<TIENTIETVUOT> TIENTIETVUOTs
+		{
+			get
+			{
+				return this._TIENTIETVUOTs;
+			}
+			set
+			{
+				this._TIENTIETVUOTs.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2722,6 +2777,18 @@ namespace BUS
 		}
 		
 		private void detach_THUCDAYs(THUCDAY entity)
+		{
+			this.SendPropertyChanging();
+			entity.NAMHOC = null;
+		}
+		
+		private void attach_TIENTIETVUOTs(TIENTIETVUOT entity)
+		{
+			this.SendPropertyChanging();
+			entity.NAMHOC = this;
+		}
+		
+		private void detach_TIENTIETVUOTs(TIENTIETVUOT entity)
 		{
 			this.SendPropertyChanging();
 			entity.NAMHOC = null;
@@ -4195,6 +4262,246 @@ namespace BUS
 						this._MATHANHTRA = default(string);
 					}
 					this.SendPropertyChanged("THANHTRA");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TIENTIETVUOT")]
+	public partial class TIENTIETVUOT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MAGIANGVIEN;
+		
+		private System.Nullable<int> _SOTIETVUOTLYTHUYET;
+		
+		private System.Nullable<double> _SOTIETVUOTTHUCHANH;
+		
+		private System.Nullable<double> _SOTIEN;
+		
+		private string _MANAMHOC;
+		
+		private EntityRef<GIANGVIEN> _GIANGVIEN;
+		
+		private EntityRef<NAMHOC> _NAMHOC;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMAGIANGVIENChanging(string value);
+    partial void OnMAGIANGVIENChanged();
+    partial void OnSOTIETVUOTLYTHUYETChanging(System.Nullable<int> value);
+    partial void OnSOTIETVUOTLYTHUYETChanged();
+    partial void OnSOTIETVUOTTHUCHANHChanging(System.Nullable<double> value);
+    partial void OnSOTIETVUOTTHUCHANHChanged();
+    partial void OnSOTIENChanging(System.Nullable<double> value);
+    partial void OnSOTIENChanged();
+    partial void OnMANAMHOCChanging(string value);
+    partial void OnMANAMHOCChanged();
+    #endregion
+		
+		public TIENTIETVUOT()
+		{
+			this._GIANGVIEN = default(EntityRef<GIANGVIEN>);
+			this._NAMHOC = default(EntityRef<NAMHOC>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAGIANGVIEN", DbType="VarChar(30) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MAGIANGVIEN
+		{
+			get
+			{
+				return this._MAGIANGVIEN;
+			}
+			set
+			{
+				if ((this._MAGIANGVIEN != value))
+				{
+					if (this._GIANGVIEN.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMAGIANGVIENChanging(value);
+					this.SendPropertyChanging();
+					this._MAGIANGVIEN = value;
+					this.SendPropertyChanged("MAGIANGVIEN");
+					this.OnMAGIANGVIENChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOTIETVUOTLYTHUYET", DbType="Int")]
+		public System.Nullable<int> SOTIETVUOTLYTHUYET
+		{
+			get
+			{
+				return this._SOTIETVUOTLYTHUYET;
+			}
+			set
+			{
+				if ((this._SOTIETVUOTLYTHUYET != value))
+				{
+					this.OnSOTIETVUOTLYTHUYETChanging(value);
+					this.SendPropertyChanging();
+					this._SOTIETVUOTLYTHUYET = value;
+					this.SendPropertyChanged("SOTIETVUOTLYTHUYET");
+					this.OnSOTIETVUOTLYTHUYETChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOTIETVUOTTHUCHANH", DbType="Float")]
+		public System.Nullable<double> SOTIETVUOTTHUCHANH
+		{
+			get
+			{
+				return this._SOTIETVUOTTHUCHANH;
+			}
+			set
+			{
+				if ((this._SOTIETVUOTTHUCHANH != value))
+				{
+					this.OnSOTIETVUOTTHUCHANHChanging(value);
+					this.SendPropertyChanging();
+					this._SOTIETVUOTTHUCHANH = value;
+					this.SendPropertyChanged("SOTIETVUOTTHUCHANH");
+					this.OnSOTIETVUOTTHUCHANHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOTIEN", DbType="Float")]
+		public System.Nullable<double> SOTIEN
+		{
+			get
+			{
+				return this._SOTIEN;
+			}
+			set
+			{
+				if ((this._SOTIEN != value))
+				{
+					this.OnSOTIENChanging(value);
+					this.SendPropertyChanging();
+					this._SOTIEN = value;
+					this.SendPropertyChanged("SOTIEN");
+					this.OnSOTIENChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MANAMHOC", DbType="VarChar(30) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MANAMHOC
+		{
+			get
+			{
+				return this._MANAMHOC;
+			}
+			set
+			{
+				if ((this._MANAMHOC != value))
+				{
+					if (this._NAMHOC.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMANAMHOCChanging(value);
+					this.SendPropertyChanging();
+					this._MANAMHOC = value;
+					this.SendPropertyChanged("MANAMHOC");
+					this.OnMANAMHOCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="GIANGVIEN_TIENTIETVUOT", Storage="_GIANGVIEN", ThisKey="MAGIANGVIEN", OtherKey="MAGIANGVIEN", IsForeignKey=true)]
+		public GIANGVIEN GIANGVIEN
+		{
+			get
+			{
+				return this._GIANGVIEN.Entity;
+			}
+			set
+			{
+				GIANGVIEN previousValue = this._GIANGVIEN.Entity;
+				if (((previousValue != value) 
+							|| (this._GIANGVIEN.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._GIANGVIEN.Entity = null;
+						previousValue.TIENTIETVUOTs.Remove(this);
+					}
+					this._GIANGVIEN.Entity = value;
+					if ((value != null))
+					{
+						value.TIENTIETVUOTs.Add(this);
+						this._MAGIANGVIEN = value.MAGIANGVIEN;
+					}
+					else
+					{
+						this._MAGIANGVIEN = default(string);
+					}
+					this.SendPropertyChanged("GIANGVIEN");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NAMHOC_TIENTIETVUOT", Storage="_NAMHOC", ThisKey="MANAMHOC", OtherKey="MANAMHOC", IsForeignKey=true)]
+		public NAMHOC NAMHOC
+		{
+			get
+			{
+				return this._NAMHOC.Entity;
+			}
+			set
+			{
+				NAMHOC previousValue = this._NAMHOC.Entity;
+				if (((previousValue != value) 
+							|| (this._NAMHOC.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._NAMHOC.Entity = null;
+						previousValue.TIENTIETVUOTs.Remove(this);
+					}
+					this._NAMHOC.Entity = value;
+					if ((value != null))
+					{
+						value.TIENTIETVUOTs.Add(this);
+						this._MANAMHOC = value.MANAMHOC;
+					}
+					else
+					{
+						this._MANAMHOC = default(string);
+					}
+					this.SendPropertyChanged("NAMHOC");
 				}
 			}
 		}

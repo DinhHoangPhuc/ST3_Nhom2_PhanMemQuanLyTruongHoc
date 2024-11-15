@@ -10,7 +10,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7FDD125E-FF67-4D36-B8F6-7CE7FF68870B}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		..\..\..\..\..\..\..\Downloads\icons8-home-26.png = ..\..\..\..\..\..\..\Downloads\icons8-home-26.png
+		..\..\Downloads\icons8-home-26.png = ..\..\Downloads\icons8-home-26.png
+		icons8-view-details-50.png = icons8-view-details-50.png
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsControlLibrary", "WindowsFormsControlLibrary\WindowsFormsControlLibrary.csproj", "{DB7231C6-17DF-4A2B-9334-9746229CEF50}"

@@ -9,6 +9,34 @@ namespace BUS
     public class LayDuLieuLuong
     {
         QLTLDataContext qltl = new QLTLDataContext();
+        public TIENLUONGTHEOTHANG layTienLuong(String gv,int thang)
+        {
+            TIENLUONGTHEOTHANG luong = qltl.TIENLUONGTHEOTHANGs.FirstOrDefault(t => t.MAGIANGVIEN == gv && t.THANGLUONG.Month == thang) ;
+            return luong;
+        }
+        public TIENLUONGTHEOTHANG GetLuongInfo(string maGV, DateTime thangLuong)
+        {
+
+            TIENLUONGTHEOTHANG luongInfo = qltl.TIENLUONGTHEOTHANGs
+                    .Where(t => t.MAGIANGVIEN == maGV &&
+                                t.THANGLUONG.Year == thangLuong.Year &&
+                                t.THANGLUONG.Month == thangLuong.Month)
+                   
+                    .FirstOrDefault();
+
+                return luongInfo;
+            
+        }
+        public TIENTIETVUOT getTienTietVuotInfo(string maGV,int year)
+        {
+            TIENTIETVUOT vuot= qltl.TIENTIETVUOTs
+                    .Where(tv => tv.MAGIANGVIEN == maGV &&
+                                tv.MANAMHOC == $"NH{year}")
+                
+                    .FirstOrDefault();
+            return vuot;
+        }
+
         public float LayHeSoChucVu(string maChucVu)
         {
             using (var context = new QLTLDataContext())
@@ -36,6 +64,24 @@ namespace BUS
                               .Select(cv => cv.MUCTROCAPCHUCVU)
                               .FirstOrDefault() ?? 0);
             }
+        }
+        public GIANGVIEN layGiangVienTheoMa(TIENLUONGTHEOTHANG tienLuong)
+        {
+           
+            return qltl.GIANGVIENs.FirstOrDefault(nv => nv.MAGIANGVIEN == tienLuong.MAGIANGVIEN);
+        }
+        public GIANGVIEN timGV(String username)
+        {
+            GIANGVIEN gv = qltl.GIANGVIENs.Where(t => t.MAGIANGVIEN == username).FirstOrDefault();
+            return gv;
+        }
+        public TIENTIETVUOT layTienTietVuotTheoGiangVien(TIENLUONGTHEOTHANG tienLuong,GIANGVIEN giangVien)
+        {
+            return qltl.TIENTIETVUOTs
+                   .Where(tv => tv.MAGIANGVIEN == giangVien.MAGIANGVIEN &&
+                               tv.MANAMHOC == $"NH{tienLuong.THANGLUONG.Year}")
+                   //.Select(tv => new { tv.SOTIETVUOTLYTHUYET, tv.SOTIETVUOTTHUCHANH, tv.SOTIEN })
+                   .FirstOrDefault();
         }
 
         public int LayDiemThiDuaTheoThang(string maGiangVien, DateTime thangLuong)

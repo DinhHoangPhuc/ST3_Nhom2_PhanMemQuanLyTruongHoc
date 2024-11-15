@@ -10,7 +10,7 @@ namespace GUI
 {
     public partial class FormXemTienLuong : Form
     {
-        QLTLDataContext qltl = new QLTLDataContext();
+      
         LayDuLieuLuong layDuLieuLuong = new LayDuLieuLuong();
         String username=String.Empty;
         public FormXemTienLuong()
@@ -35,7 +35,7 @@ namespace GUI
             //cbbGV.DisplayMember = "TENGIANGVIEN";
             //cbbGV.ValueMember = "MAGIANGVIEN";
             username = Session.Username;
-            GIANGVIEN gv = qltl.GIANGVIENs.Where(t => t.MAGIANGVIEN == username).FirstOrDefault();
+            GIANGVIEN gv=layDuLieuLuong.timGV(username);
             txtTenGV.Text = gv.TENGIANGVIEN + " - " + gv.MAGIANGVIEN;
 
         }
@@ -73,7 +73,7 @@ namespace GUI
         {
             string fileName = "Phieuluong";
             string maGV = username;
-            var luong = qltl.TIENLUONGTHEOTHANGs.FirstOrDefault(t => t.MAGIANGVIEN == maGV && t.THANGLUONG.Month == dateTimeThang.Value.Month);
+            var luong = layDuLieuLuong.layTienLuong(maGV,dateTimeThang.Value.Month);
             if (luong != null)
             {
                 var exporter = new ExcelExport();
@@ -92,24 +92,14 @@ namespace GUI
             string maGV = username;
             DateTime thangLuong = dateTimeThang.Value;
 
-            var giangVien = qltl.GIANGVIENs.FirstOrDefault(gv => gv.MAGIANGVIEN == maGV);
+            var giangVien = layDuLieuLuong.timGV(maGV);
             if (giangVien == null)
             {
                 MessageBox.Show("Không tìm thấy thông tin giảng viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            var luongInfo = qltl.TIENLUONGTHEOTHANGs
-                .Where(t => t.MAGIANGVIEN == maGV &&
-                           t.THANGLUONG.Year == thangLuong.Year &&
-                           t.THANGLUONG.Month == thangLuong.Month)
-                .Select(t => new {
-                    t.MAGIANGVIEN,
-                    t.THANGLUONG,
-                    t.TONGTIETDAY,
-                    t.TIENLUONG
-                })
-                .FirstOrDefault();
+            var luongInfo = layDuLieuLuong.GetLuongInfo(maGV, thangLuong);
 
             if (luongInfo != null)
             {
@@ -141,12 +131,9 @@ namespace GUI
                 txtTroCapThem.Text = troCapThem.ToString("#,##0");
 
                 // Lấy thông tin tiết vượt
-                var tietVuotInfo = qltl.TIENTIETVUOTs
-                    .Where(tv => tv.MAGIANGVIEN == maGV &&
-                                tv.MANAMHOC == $"NH{thangLuong.Year}")
-                    .Select(tv => new { tv.SOTIETVUOTLYTHUYET, tv.SOTIETVUOTTHUCHANH, tv.SOTIEN })
-                    .FirstOrDefault();
+                var tietVuotInfo = layDuLieuLuong.getTienTietVuotInfo(maGV, thangLuong.Year);
 
+               
                 if (tietVuotInfo != null)
                 {
                     txtSoTietVuotLT.Text = tietVuotInfo.SOTIETVUOTLYTHUYET.ToString();

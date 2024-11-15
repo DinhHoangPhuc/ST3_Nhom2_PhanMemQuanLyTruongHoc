@@ -14,7 +14,7 @@ namespace GUI
 {
     class ExcelExport
     {
-        private QLTLDataContext _qlhh = new QLTLDataContext();
+        
         LayDuLieuLuong get = new LayDuLieuLuong();
 
         public void ExportTienLuongTheoThang(TIENLUONGTHEOTHANG tienLuong, ref string fileName, bool isPrintPreview = false)
@@ -23,7 +23,7 @@ namespace GUI
             string ngay = $"Tháng {tienLuong.THANGLUONG.Month} năm {tienLuong.THANGLUONG.Year}";
             replacer.Add("%NgayThangNam", ngay);
 
-            var giangVien = _qlhh.GIANGVIENs.FirstOrDefault(nv => nv.MAGIANGVIEN == tienLuong.MAGIANGVIEN);
+            var giangVien = get.layGiangVienTheoMa(tienLuong);
             if (giangVien != null)
             {
                 replacer.Add("%MaGiangVien", giangVien.MAGIANGVIEN);
@@ -40,11 +40,7 @@ namespace GUI
             {
                 replacer.Add("%TongTietDay", tienLuong.TONGTIETDAY.ToString());
                 replacer.Add("%Luong", tienLuong.TIENLUONG?.ToString("#,##0") ?? "0");
-                var tietVuotInfo = _qlhh.TIENTIETVUOTs
-                   .Where(tv => tv.MAGIANGVIEN == giangVien.MAGIANGVIEN &&
-                               tv.MANAMHOC == $"NH{tienLuong.THANGLUONG.Year}")
-                   .Select(tv => new { tv.SOTIETVUOTLYTHUYET, tv.SOTIETVUOTTHUCHANH, tv.SOTIEN })
-                   .FirstOrDefault();
+                var tietVuotInfo = get.layTienTietVuotTheoGiangVien(tienLuong, giangVien);
 
                 if (tietVuotInfo != null)
                 {

@@ -17,6 +17,22 @@ This project is a **WinForms desktop application** designed to manage lecturer a
 - **.NET Framework 4.5**: The application is built on the .NET Framework 4.5.
 - **SQL Server**: Used as the database to store and manage data.
 
+## Pictures demo of the project
+- Login:
+![login](https://github.com/DinhHoangPhuc/ST3_Nhom2_PhanMemQuanLyTruongHoc/blob/main/demo_picture/dang_nhap.png "Login")
+- Dashboard:
+![Dashboard](https://github.com/DinhHoangPhuc/ST3_Nhom2_PhanMemQuanLyTruongHoc/blob/main/demo_picture/dashboard.png "Dashboard")
+- Caculates salary:
+![Dashboard](https://github.com/DinhHoangPhuc/ST3_Nhom2_PhanMemQuanLyTruongHoc/blob/main/demo_picture/tinh_luong.png "Caculates salary")
+- Export excel salary report:
+![Dashboard](https://github.com/DinhHoangPhuc/ST3_Nhom2_PhanMemQuanLyTruongHoc/blob/main/demo_picture/luong_excel.png "Caculates salary")
+- Management of Lecturer Emulation Points:
+![Dashboard](https://github.com/DinhHoangPhuc/ST3_Nhom2_PhanMemQuanLyTruongHoc/blob/main/demo_picture/quan_ly_vi_pham.png "Caculates salary")
+- Views salary for lecturer:
+![Dashboard](https://github.com/DinhHoangPhuc/ST3_Nhom2_PhanMemQuanLyTruongHoc/blob/main/demo_picture/xem_tien_luong.png "Caculates salary")
+- Authorization:
+![Dashboard](https://github.com/DinhHoangPhuc/ST3_Nhom2_PhanMemQuanLyTruongHoc/blob/main/demo_picture/phan_quyen.png "Caculates salary")
+
 ## How to Run
 To run this WinForms project, follow these steps:
 

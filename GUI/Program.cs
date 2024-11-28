@@ -30,6 +30,7 @@ namespace GUI
             }
 
             Application.Run(new FormDangNhap());
+            //Application.Run(new FormTrangChu());
         }
     }
 }

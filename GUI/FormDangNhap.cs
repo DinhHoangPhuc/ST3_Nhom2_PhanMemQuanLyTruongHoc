@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
+using BUS;
 
 namespace GUI
 {
     public partial class FormDangNhap : MaterialSkin.Controls.MaterialForm
     {
         private readonly MaterialSkinManager materialSkinManager;
+        private readonly DangNhap dangNhaphelper;
 
         public FormDangNhap()
         {
@@ -28,12 +30,47 @@ namespace GUI
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Blue500, Primary.Blue700, Primary.Blue200,
                 Accent.Orange400, TextShade.WHITE);
+
+            dangNhaphelper = new DangNhap();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            FormTrangChu formTrangChu = new FormTrangChu();
-            formTrangChu.ShowDialog();
+            string taiKhoan = txtTenDangNhap.Text;
+            string matKhau = txtMatKhau.Text;
+
+            bool ketQuaDangNhap = dangNhaphelper.Login(taiKhoan, matKhau);
+
+            if(ketQuaDangNhap)
+            {
+                if(dangNhaphelper.CheckHoatDongTaiKhoan(taiKhoan))
+                {
+                    Session.Username = taiKhoan;
+
+                    MessageBox.Show("Đăng nhập thành công");
+                    MoFormTrangChu();
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản bị vô hiệu hóa");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại !!");
+            }
+        }
+
+        private void MoFormTrangChu()
+        {
+            FormTrangChu frm = new FormTrangChu();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtMatKhau.Password = !chkShowPassword.Checked;
         }
     }
 }

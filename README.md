@@ -49,5 +49,5 @@ To run this WinForms project, follow these steps:
 4. **Build the Solution**:
 - Build the solution by clicking on `Build > Build Solution` in Visual Studio.
 5. **Run the Application**:
-- Set the startup project to `GUI` (right-click on the GUI project in Solution Explorer and select Set as Startup Project).
+- Set the startup project to `GUI` (right-click on the GUI project in Solution Explorer and select `Set as Startup Project`).
 - Press F5 or click on the Start button to run the application.

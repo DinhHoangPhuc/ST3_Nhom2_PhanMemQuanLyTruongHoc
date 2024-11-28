@@ -1,19 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.34301.259
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{EDF664D0-8ED2-4F89-BE2D-6B27CD4BCD06}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{39B8FED0-B1A4-4BA8-8BFB-327D6A3C00B6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7FDD125E-FF67-4D36-B8F6-7CE7FF68870B}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		..\..\..\..\..\..\..\Downloads\icons8-home-26.png = ..\..\..\..\..\..\..\Downloads\icons8-home-26.png
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsControlLibrary", "WindowsFormsControlLibrary\WindowsFormsControlLibrary.csproj", "{DB7231C6-17DF-4A2B-9334-9746229CEF50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +21,6 @@ Global
 		{39B8FED0-B1A4-4BA8-8BFB-327D6A3C00B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39B8FED0-B1A4-4BA8-8BFB-327D6A3C00B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39B8FED0-B1A4-4BA8-8BFB-327D6A3C00B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DB7231C6-17DF-4A2B-9334-9746229CEF50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB7231C6-17DF-4A2B-9334-9746229CEF50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB7231C6-17DF-4A2B-9334-9746229CEF50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB7231C6-17DF-4A2B-9334-9746229CEF50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

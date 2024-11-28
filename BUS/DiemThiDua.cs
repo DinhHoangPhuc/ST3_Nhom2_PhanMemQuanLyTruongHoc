@@ -27,5 +27,22 @@ namespace BUS
         .Select(d => d.DIEMTHIDUA.HasValue ? (double)d.DIEMTHIDUA.Value : 0.0)
         .ToList();
         }
+
+        public List<DIEMTHIDUATHEOTHANG> GetAllDiemThiDuaByThangAndNam(int thang, int nam)
+        {
+            return qltl.DIEMTHIDUATHEOTHANGs.Where(d => d.THANG.Month == thang && d.THANG.Year == nam).ToList();
+        }
+
+        public List<GIANGVIEN> GetAllGiangVien()
+        {
+            return qltl.GIANGVIENs.ToList();
+        }
+
+
+        public List<CHUCVU> GetChucVuByID(string maCHucVu)
+        {
+            return qltl.CHUCVUs.Where(c => c.MACHUCVU == maCHucVu).ToList();
+        }
+
     }
 }

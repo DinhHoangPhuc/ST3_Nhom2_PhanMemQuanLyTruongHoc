@@ -45,6 +45,11 @@
     <Compile Include="Class1.cs" />
     <Compile Include="DangNhap.cs" />
     <Compile Include="DiemThiDua.cs" />
+    <Compile Include="FileCommon.cs" />
+    <Compile Include="GiangVien.cs" />
+    <Compile Include="LayDuLieuLuong.cs" />
+    <Compile Include="PermissionService.cs" />
+    <Compile Include="PhanQuyenNguoiDung.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -56,7 +61,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTL.dbml</DependentUpon>
     </Compile>
+    <Compile Include="QL_ViPham.cs" />
+    <Compile Include="QuanLyNguoiDung.cs" />
     <Compile Include="Session.cs" />
+    <Compile Include="TinhLuong.cs" />
+    <Compile Include="UserService.cs" />
     <Compile Include="ViPham.cs" />
   </ItemGroup>
   <ItemGroup>

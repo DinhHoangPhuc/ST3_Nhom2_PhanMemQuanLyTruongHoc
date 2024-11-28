@@ -28,6 +28,7 @@ namespace GUI
 
             InitializeComponent();
             InitializeBarChart();
+            InitializeDataGridView();
             LoadViPhamDatagridview(username, DateTime.Now);
         }
 
@@ -67,14 +68,79 @@ namespace GUI
             cartesianChart.LegendLocation = LegendLocation.Right;
         }
 
+        private void InitializeDataGridView()
+        {
+            dgvViPham.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            DataGridViewColumn maViPhamColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "MaViPham",
+                HeaderText = "Mã Vi Phạm",
+                DataPropertyName = "MaViPham",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            };
+
+            DataGridViewColumn tenViPhamColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "TenViPham",
+                HeaderText = "Tên Vi Phạm",
+                DataPropertyName = "TenViPham",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            };
+
+            DataGridViewColumn ghiChuColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "GhiChu",
+                HeaderText = "Ghi chú",
+                DataPropertyName = "GhiChu",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            };
+
+            DataGridViewColumn diemTruColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "DiemTru",
+                HeaderText = "Điểm Trừ",
+                DataPropertyName = "DiemTru",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            };
+
+            DataGridViewColumn thangViPhamColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "ThangViPham",
+                HeaderText = "Tháng Vi Phạm",
+                DataPropertyName = "ThangViPham",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            };
+
+            DataGridViewColumn maGVColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "MaGiangVien",
+                HeaderText = "Mã Giảng Viên",
+                DataPropertyName = "MaGiangVien",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            };
+
+            DataGridViewColumn giangVienColumn = new DataGridViewTextBoxColumn
+            {
+                Name = "GiangVien",
+                HeaderText = "Giảng Viên",
+                DataPropertyName = "GIANGVIEN.TENGIANGVIEN",
+                Visible = false
+            };
+
+            dgvViPham.Columns.Add(maViPhamColumn);
+            dgvViPham.Columns.Add(tenViPhamColumn);
+            dgvViPham.Columns.Add(ghiChuColumn);
+            dgvViPham.Columns.Add(diemTruColumn);
+            dgvViPham.Columns.Add(thangViPhamColumn);
+            dgvViPham.Columns.Add(maGVColumn);
+            dgvViPham.Columns.Add(giangVienColumn);
+        }
+
         private void LoadViPhamDatagridview(string maGV, DateTime ngay)
         {
             dgvViPham.DataSource = viPham.GetViPhamByMonth(maGV, ngay);
         }
 
-        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            LoadViPhamDatagridview(username, dateTimePicker.Value);
-        }
     }
 }

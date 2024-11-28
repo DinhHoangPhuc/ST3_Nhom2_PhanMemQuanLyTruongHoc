@@ -46,6 +46,15 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Syncfusion.Compression.Base">
+      <HintPath>..\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Base">
+      <HintPath>..\Syncfusion.DocIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base">
+      <HintPath>..\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -69,6 +78,7 @@
     <Compile Include="CustomDatagridview.Designer.cs">
       <DependentUpon>CustomDatagridview.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExcelExport.cs" />
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +96,42 @@
     </Compile>
     <Compile Include="FormDiemThiDua.Designer.cs">
       <DependentUpon>FormDiemThiDua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhanQuyen.Designer.cs">
+      <DependentUpon>FormPhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLyNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLyNguoiDung.Designer.cs">
+      <DependentUpon>FormQuanLyNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemMoiNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemMoiNguoiDung.Designer.cs">
+      <DependentUpon>FormThemMoiNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTinhLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTinhLuong.Designer.cs">
+      <DependentUpon>FormTinhLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViPham.Designer.cs">
+      <DependentUpon>FormViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXemTienLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXemTienLuong.Designer.cs">
+      <DependentUpon>FormXemTienLuong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,8 +153,20 @@
     <EmbeddedResource Include="FormDiemThiDua.resx">
       <DependentUpon>FormDiemThiDua.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPhanQuyen.resx">
+      <DependentUpon>FormPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLyNguoiDung.resx">
+      <DependentUpon>FormQuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemMoiNguoiDung.resx">
+      <DependentUpon>FormThemMoiNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTrangChu.resx">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXemTienLuong.resx">
+      <DependentUpon>FormXemTienLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

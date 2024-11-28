@@ -26,3 +26,10 @@ C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food 
 C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\obj\Debug\GUI.CustomDataGridView.resources
 C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\obj\Debug\GUI.csproj.Up2Date
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\obj\Debug\GUI.FormQuanLyNguoiDung.resources
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\obj\Debug\GUI.FormPhanQuyen.resources
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\obj\Debug\GUI.FormThemMoiNguoiDung.resources
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\bin\Debug\Syncfusion.Compression.Base.dll
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\bin\Debug\Syncfusion.DocIO.Base.dll
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\bin\Debug\Syncfusion.XlsIO.Base.dll
+C:\Users\DINH HOANG PHUC\Desktop\OneDrive - Ho Chi Minh city University of Food Industry\HOC_TAP\HK_7\NET_NangCao\Nhom\QuanLyTruongDaiHoc\GUI\obj\Debug\GUI.FormXemTienLuong.resources
